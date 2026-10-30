@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Ndull ♡</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Dekorasi awan -->
+    <div class="cloud cloud1">☁</div>
+    <div class="cloud cloud2">☁</div>
+    <div class="cloud cloud3">☁</div>
+    <div class="cloud cloud4">☁</div>
+
+    <div class="stars">✦　˚　♡　✧　˚　✦</div>
+
+    <main class="container">
+
+        <!-- SLIDE 1 -->
+        <section class="slide active">
+            <div class="emoji">☁️</div>
+            <p class="small">a little celebration for you</p>
+            <h1>merayakan<br>dewasanya ndull</h1>
+            <p class="subtitle">a special little page for someone special ♡</p>
+            <button onclick="nextSlide()">Start ♡</button>
+        </section>
+
+        <!-- SLIDE 2 -->
+        <section class="slide">
+            <div class="emoji">🩵</div>
+            <p class="small">hello, ndull!</p>
+            <h1>hi ndull,</h1>
+            <p class="message">
+                gw bikin ini buat ngerayain dewasanya ndull.
+            </p>
+            <button onclick="nextSlide()">Selanjutnya →</button>
+        </section>
+
+        <!-- SLIDE 3 -->
+        <section class="slide">
+            <div class="emoji">🎂</div>
+            <p class="small">guess what?</p>
+            <h1>ciee ciee!</h1>
+            <p class="message">
+                cie udah dewasa ciee, gimana rasanya dewasa ndull?
+                enak kann?
+            </p>
+            <button onclick="nextSlide()">Selanjutnya →</button>
+        </section>
+
+        <!-- SLIDE 4 -->
+        <section class="slide">
+            <div class="emoji">💌</div>
+            <p class="small">a little message for you</p>
+            <h2>one more thing, ndull...</h2>
+
+            <div class="long-message">
+                gw bikin ini gak semata-mata buat rayain kedewasaan
+                lu ndul, gw juga mau say thank u karena udah mau jadi
+                temen cerita gw.
+
+                <br><br>
+
+                gw harap pertemanan kita gak putus karena masalah
+                sepele ya ndull, gw harap setiap kali ada masalah
+                sama pertemanan kita, lu selalu mau untuk gw aja
+                diskusi dulu.
+
+                <br><br>
+
+                and tolong stop berteman sama orang orang toxic ndull,
+                sayangi diri lu sendiri, cari hal yang baik baik,
+                jangan mudah percaya sama perkataan orang.
+
+                <br><br>
+
+                sekian ndull gw mau mancing, byee ndull ♡
+            </div>
+
+            <button onclick="nextSlide()">Done ♡</button>
+        </section>
+
+        <!-- SLIDE 5 -->
+        <section class="slide">
+            <div class="emoji">☁️🩵</div>
+            <p class="small">that's all for today</p>
+            <h1>be happy ndull</h1>
+            <p class="subtitle">
+                don't forget to take care of yourself!
+            </p>
+            <div class="heart">♡</div>
+        </section>
+
+    </main>
+
+    <p class="footer">made with love ♡ just for ndull</p>
+
+    <script>
+        let currentSlide = 0;
+
+        const slides = document.querySelectorAll(".slide");
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove("active");
+
+            currentSlide++;
+
+            if (currentSlide >= slides.length) {
+                currentSlide = slides.length - 1;
+            }
+
+            slides[currentSlide].classList.add("active");
+        }
+    </script>
+
+</body>
+</html>

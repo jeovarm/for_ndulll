@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #eaf8ff,
+        #c9eaff,
+        #dcefff,
+        #f2faff
+    );
+    font-family: 'Baloo 2', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+/* DEKORASI AWAN */
+
+.cloud {
+    position: absolute;
+    color: white;
+    font-size: 95px;
+    opacity: 0.85;
+    animation: floating 6s ease-in-out infinite;
+    pointer-events: none;
+    text-shadow: 0 5px 15px rgba(125, 183, 220, 0.15);
+}
+
+.cloud1 {
+    top: 5%;
+    left: 4%;
+}
+
+.cloud2 {
+    top: 17%;
+    right: 5%;
+    font-size: 110px;
+    animation-delay: 1s;
+}
+
+.cloud3 {
+    bottom: 10%;
+    left: 5%;
+    font-size: 105px;
+    animation-delay: 2s;
+}
+
+.cloud4 {
+    bottom: 6%;
+    right: 8%;
+    font-size: 85px;
+    animation-delay: 3s;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-22px) translateX(8px);
+    }
+}
+
+/* BINTANG */
+
+.stars {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    opacity: 0.9;
+    animation: sparkle 2s infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes sparkle {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* KARTU UTAMA */
+
+.container {
+    width: 100%;
+    max-width: 430px;
+    min-height: 490px;
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    border-radius: 35px;
+    box-shadow:
+        0 15px 40px rgba(111, 169, 207, 0.2),
+        inset 0 0 20px rgba(255, 255, 255, 0.5);
+    padding: 35px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* SLIDE */
+
+.slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.slide.active {
+    display: block;
+    animation: appear 0.7s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* EMOJI */
+
+.emoji {
+    font-size: 58px;
+    margin-bottom: 12px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+/* JUDUL */
+
+h1 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #579ac8;
+    margin-bottom: 15px;
+    text-shadow: 2px 3px 0 rgba(255, 255, 255, 0.8);
+}
+
+h2 {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    color: #579ac8;
+    margin-bottom: 18px;
+}
+
+/* TEKS KECIL */
+
+.small {
+    font-family: 'Fredoka', sans-serif;
+    color: #81afd0;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* ISI PESAN */
+
+.message {
+    font-family: 'Baloo 2', cursive;
+    color: #648ba8;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.9;
+    margin: 20px 0 30px;
+}
+
+.subtitle {
+    color: #83abc7;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px 0 25px;
+}
+
+/* PESAN PANJANG */
+
+.long-message {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid #e2f3ff;
+    border-radius: 22px;
+    padding: 20px;
+    color: #668da9;
+    font-family: 'Baloo 2', cursive;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.9;
+    text-align: left;
+    max-height: 240px;
+    overflow-y: auto;
+    margin-bottom: 22px;
+}
+
+/* SCROLLBAR */
+
+.long-message::-webkit-scrollbar {
+    width: 5px;
+}
+
+.long-message::-webkit-scrollbar-thumb {
+    background: #a8d8f5;
+    border-radius: 20px;
+}
+
+.long-message::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* TOMBOL */
+
+button {
+    background: linear-gradient(
+        135deg,
+        #94d4f5,
+        #70b8e5
+    );
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    padding: 13px 35px;
+    border-radius: 30px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(93, 159, 202, 0.25);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.04);
+    box-shadow: 0 10px 20px rgba(93, 159, 202, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* SLIDE TERAKHIR */
+
+.heart {
+    color: #77bce4;
+    font-size: 50px;
+    margin-top: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* FOOTER */
+
+.footer {
+    position: absolute;
+    bottom: 15px;
+    color: #79a8c7;
+    font-size: 12px;
+    letter-spacing: 1px;
+    z-index: 3;
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 18px;
+    }
+
+    .container {
+        min-height: 460px;
+        padding: 30px 20px;
+        border-radius: 30px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .long-message {
+        font-size: 13px;
+        max-height: 230px;
+        padding: 16px;
+    }
+
+    .cloud {
+        font-size: 65px;
+    }
+
+    .emoji {
+        font-size: 50px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+}
